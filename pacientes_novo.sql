@@ -18,6 +18,18 @@ LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
     
 SELECT * FROM pacientes_novo;
+
+-- MÉDIA DE IDADE DOS PACIENTES POR SEXO --
+SELECT sexo, AVG(idade) AS media_idade_sexo 
+FROM pacientes_novo 
+GROUP BY sexo; 
+
+-- TOTAL DE PACIENTES POR PLANO DE SAÚDE --
+SELECT plano_saude, COUNT(id_paciente) AS paciente_plano
+FROM pacientes_novo 
+GROUP BY plano_saude;
+
+
         
 
         

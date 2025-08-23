@@ -8,15 +8,15 @@ CREATE TABLE avaliacoes_novo(
     comentario VARCHAR(50)
  );
 
-    SET GLOBAL local_infile = 1;
+SET GLOBAL local_infile = 1;
     
-    LOAD DATA INFILE 'C:/Users/36134552025.1/Documents/avaliacoes.csv' 
-    INTO TABLE avaliacoes_novo
-    FIELDS TERMINATED BY ','
-    LINES TERMINATED BY '\n'
-    IGNORE 1 ROWS;
+LOAD DATA INFILE 'C:/Users/36134552025.1/Documents/avaliacoes.csv' 
+INTO TABLE avaliacoes_novo
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
     
-    SELECT * FROM avaliacoes_novo;
-    
+SELECT * FROM avaliacoes_novo;
+        
 
         

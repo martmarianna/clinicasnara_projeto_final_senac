@@ -21,6 +21,22 @@ LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
     
 SELECT * FROM consultas_novo;
+
+-- TOTAL DE CONSULTAS POR ESPECIALIDADE --
+SELECT especialidade, COUNT(especialidade) AS total_consultas
+FROM consultas_novo 
+WHERE status_base = 'Realizada'
+GROUP BY especialidade;
+
+-- CONSULTA POR CLÍNICA --
+SELECT id_clinica, COUNT(id_consulta) AS consultas_clinica
+FROM consultas_novo 
+GROUP BY id_clinica;
+
+-- TOTAL DE CONSULTAS POR STATUS --
+SELECT status_base, COUNT(id_consulta) AS consultas_status
+FROM consultas_novo 
+GROUP BY status_base;
         
 
         
